@@ -1,6 +1,6 @@
 .container {
     display: flex;
-    background-color: lawngreen;
+    background-color: #8bc914;
     flex-direction: row;
     align-items: flex-end;
 }
@@ -12,7 +12,7 @@
     padding-left: 10px;
 }
 .messageBox {
-    background-color: darkgreen;
+    background-color: #3a5905;
     border-radius:10px 10px 10px 0;
     padding-left:  20px;
     padding-right: 20px;
@@ -36,8 +36,8 @@
 
 .triangle {
     border: 10px solid transparent;
-    border-right: 1px solid darkgreen;
-    border-bottom: 10px solid darkgreen;
+    border-right: 1px solid #3a5905;
+    border-bottom: 10px solid #3a5905;
     position: absolute;
     left: 80px;
     top: 166px
