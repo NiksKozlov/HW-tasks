@@ -1,7 +1,19 @@
-.someClass {
-
+.beautiful {
+    background-color: #93b8dc;
+    color: white;
 }
 
 .error {
     border: 1px solid red;
+    background-color: #93b8dc;
+    color: white;
+}
+
+.button {
+    background-color: #8472c4;
+    color: white;
+}
+
+.errorTitle {
+    color: red;
 }
