@@ -1,3 +1,12 @@
 .someClass {
 
 }
+
+.item {
+    background-color: mediumslateblue;
+    color: white;
+}
+.priorityClass {
+    background-color: darkcyan;
+    color: white;
+}
