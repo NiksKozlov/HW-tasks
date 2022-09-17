@@ -39,14 +39,7 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUser
 
     const onEnter = (e: KeyboardEvent<HTMLInputElement>) => {
         if(e.key === 'Enter') {
-            if (name.length > 0) {
-                alert(`Hello ${name}!`)// need to fix
-                addUserCallback(name)
-                setName('')
-            } else {
-                setError('Please enter a valid name!')
-                setName('')
-            }
+            addUser()
         }
     }
 
