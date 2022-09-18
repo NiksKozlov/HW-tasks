@@ -27,8 +27,8 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUser
 
     }
     const addUser = () => {
-        if (name.length > 0) {
-            alert(`Hello ${name}!`)// need to fix
+        if (name.trim() !== '') {
+            alert(`Hello ${name.trim()}!`)// need to fix
             addUserCallback(name)
             setName('')
         } else {
