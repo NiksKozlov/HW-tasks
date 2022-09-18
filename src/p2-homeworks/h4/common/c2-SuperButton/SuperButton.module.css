@@ -1,57 +1,85 @@
+@keyframes blink {
+    0% {
+        left: -130%;
+    }
+    100% {
+        left: 130%;
+    }
+}
+
 .default {
-    text-decoration: none;
-    display: inline-block;
-    color: white;
+    background: #c9d8e8;
+    color: #404091;
     outline: none;
-    margin: 10px 20px;
-    border-radius: 10px;
-    font-family: 'Montserrat', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    background-color: #b49bff;
-    background-size: 200% auto;
-    box-shadow: 0 0 20px rgba(0, 0, 0, .1);
-    transition: .5s;
-}
-
-.default:disabled {
-    text-decoration: none;
-    display: inline-block;
-    color: #9f9797;
-    margin: 10px 20px;
-    border-radius: 10px;
-    font-family: 'Montserrat', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    background-image: linear-gradient(to right, #565656 0%, #565656 51%, #565656 100%);
-    background-size: 200% auto;
-    box-shadow: 0 0 20px rgba(0, 0, 0, .1);
-}
-
-.default:hover {
-    background-position: right center;
 }
 
 .red {
-    text-decoration: none;
-    display: inline-block;
-    color: white;
-    margin: 10px 20px;
-    border-radius: 10px;
-    font-family: 'Montserrat', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    background-color: #911c1c;
-    background-size: 200% auto;
-    box-shadow: 0 0 20px rgba(0, 0, 0, .1);
-
+    background: #dd3355;
 }
 
-.red:hover {
-    background-position: right center;
-}
 
 .button {
-    color: white;
-    outline: none;
+    position: relative;
+    margin: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.button::after {
+    display: block;
+    content: '';
+    position: absolute;
+
+    left: -130%;
+    top: 0;
+    height: 100%;
+    width: 20%;
+
+    transform: skew(45deg);
+
+    background-color: #ffffff;
+    opacity: 0.7;
+
+    z-index: 14;
+}
+
+.button:hover::after {
+    animation: blink 0.35s ease;
+}
+
+.button:hover::before {
+    display: block;
+    content: '';
+    position: absolute;
+
+    left: -100vw;
+    top: 0;
+    height: 100vh;
+    width: 300vw;
+
+    background-color: #ffffff;
+    opacity: 0.2;
+
+    z-index: 7;
+}
+
+.button:focus {
+    outline: #404091 solid 1px;
+}
+
+.button:active {
+    background: #404091;
+}
+
+.button:disabled {
+    color: #5f625f;
+    cursor: auto;
+}
+
+.button:disabled::after {
+    z-index: -1;
+}
+
+.button:disabled::before {
+    z-index: -1;
 }
