@@ -1,24 +1,30 @@
 
 .input {
     /*background-color: #93b8dc;*/
-    background-color: red;
     color: white;
-    border-radius: 1px;
+    border-radius: 10px;
+    height: 20px;
 }
 
 .inputError {
     border: 1px solid red;
-    background-color: #93b8dc;
     color: white;
+    border-radius: 10px;
+    height: 20px;
 }
 
 .button {
     background-color: #8472c4;
     color: white;
     border-radius: 5px;
+    font-weight: bold;
 }
 
 .errorMessage {
     color: red;
     height: 20px;
+}
+
+.userCounter {
+    font-weight: bold;
 }

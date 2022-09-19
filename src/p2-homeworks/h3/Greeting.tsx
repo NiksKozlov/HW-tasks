@@ -27,7 +27,7 @@ const Greeting: React.FC<GreetingPropsType> = (
                 onKeyDown={onEnter}
             />
             <SuperButton className={s.button} onClick={addUser}>add</SuperButton>
-            <span>{totalUsers}</span>
+            <span className={s.userCounter}>{totalUsers}</span>
             <div className={s.errorMessage}>{error}</div>
         </div>
     )

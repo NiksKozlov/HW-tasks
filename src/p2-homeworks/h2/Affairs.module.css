@@ -1,16 +1,23 @@
-.someClass {
-
+.wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 300px;
+    background-color: blueviolet;
 }
 
 .item {
-    background-color: mediumslateblue;
     color: white;
+    width: 100px;
 }
 .priorityClass {
-    background-color: darkcyan;
     color: white;
+    width: 150px;
 }
 
 .button {
     border-radius: 5px;
+    font-weight: bold;
 }

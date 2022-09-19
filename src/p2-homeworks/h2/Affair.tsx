@@ -13,7 +13,7 @@ function Affair(props: AffairPropsType) {
     const deleteCallback = () => {props.deleteAffairCallback(props.affair._id)}
 
     return (
-        <div>
+        <div className={s.wrapper}>
             <span className={s.item}>{props.affair.name} </span>
             <span className={s.priorityClass}>priority: {props.affair.priority} </span>
             <SuperButton className={s.button} onClick={deleteCallback}>X</SuperButton>
