@@ -17,7 +17,6 @@ test('sort name up', () => {
     const newState = homeWorkReducer(initialState, {type: 'SORT-NAME-UP', payload: 'up'})
 
 
-    console.log(newState)
     expect(newState[0].name).toBe('Александр')
     expect(newState[1].name).toBe('Виктор')
     expect(newState[5].name).toBe('Кот')
@@ -26,7 +25,6 @@ test('sort name down', () => {
     const newState = homeWorkReducer(initialState, {type: 'SORT-NAME-DOWN', payload: 'down'})
 
 
-    console.log(newState)
     expect(newState[0].name).toBe('Кот')
     expect(newState[1].name).toBe('Коля')
     expect(newState[5].name).toBe('Александр')

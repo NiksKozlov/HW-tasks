@@ -1,22 +1,10 @@
 import React, {useState} from 'react'
 import {homeWorkReducer} from './bll/homeWorkReducer'
 import SuperButton from '../h4/common/c2-SuperButton/SuperButton'
+import s from './HW8.module.css'
 
 
-export type ActionTypes = SortUpAT | SortDownAT | CheckAgeAT
 
-type SortUpAT = {
-    type: 'SORT-NAME-UP'
-    payload: 'up'
-}
-type SortDownAT = {
-    type: 'SORT-NAME-DOWN'
-    payload: 'down'
-}
-type CheckAgeAT = {
-    type: 'CHECK-AGE-18'
-    payload: 18
-}
 
 export type UserType = {
     _id: number
@@ -39,7 +27,7 @@ function HW8() {
 
     // need to fix any
     const finalPeople = people.map((p: UserType) => (
-        <div key={p._id}>
+        <div key={p._id} className={s.item}>
             {p.name}, {p.age}
         </div>
     ))
@@ -60,7 +48,7 @@ function HW8() {
             <div>
                 <SuperButton onClick={sortUp}>sort up</SuperButton>
                 <SuperButton onClick={sortDown}>sort down</SuperButton>
-                <SuperButton onClick={checkAge}>sort down</SuperButton>
+                <SuperButton onClick={checkAge}>check 18</SuperButton>
             </div>
 
             <hr />
