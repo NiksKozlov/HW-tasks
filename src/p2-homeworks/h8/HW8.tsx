@@ -28,7 +28,9 @@ function HW8() {
     // need to fix any
     const finalPeople = people.map((p: UserType) => (
         <div key={p._id} className={s.item}>
-            {p.name}, {p.age}
+            <span>{p.name}</span>
+
+            {p.age}
         </div>
     ))
 
