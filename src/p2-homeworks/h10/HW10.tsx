@@ -5,11 +5,9 @@ import {RootStateType} from './bll/store';
 import {InitialStateType, loadingAC} from './bll/loadingReducer';
 
 function HW10() {
-    // useSelector, useDispatch
 
     const dispatch = useDispatch()
     const loading = useSelector<RootStateType, boolean>(state => state.loading.loading)
-    console.log(loading)
     //const loading = false
 
     const setLoading = () => {
