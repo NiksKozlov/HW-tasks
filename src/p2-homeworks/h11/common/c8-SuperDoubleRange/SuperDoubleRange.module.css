@@ -1,0 +1,22 @@
+.container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.thumb {
+    pointer-events: none;
+    position: absolute;
+    height: 0;
+    width: 200px;
+    outline: none;
+}
+
+.thumb--left {
+    z-index: 3;
+}
+
+.thumb--right {
+    z-index: 4;
+}
